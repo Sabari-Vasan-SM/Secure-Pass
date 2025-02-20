@@ -1,48 +1,79 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-  }
-  
-  .container {
-    background: white;
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+/* Scope styles to only affect Login Page */
+.login-wrapper {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 25px;
+    background: #1e272e;
+    color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
     text-align: center;
+    transition: transform 0.3s ease-in-out;
   }
   
-  h2 {
-    margin-bottom: 1rem;
-    color: #333;
+  .login-wrapper:hover {
+    transform: scale(1.03);
   }
   
-  input {
+  /* Heading */
+  .login-wrapper h2 {
+    margin-bottom: 15px;
+    font-size: 26px;
+    font-weight: bold;
+    color: #f5f6fa;
+  }
+  
+  /* Input Field */
+  .login-wrapper input {
     width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 1rem;
-  }
-  
-  button {
-    width: 100%;
-    padding: 10px;
-    background-color: #007bff;
+    padding: 12px;
     border: none;
-    color: white;
-    font-size: 1rem;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background 0.3s;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+    background: #333a42;
+    color: #ffffff;
+    transition: 0.3s;
   }
   
-  button:hover {
-    background-color: #0056b3;
+  .login-wrapper input::placeholder {
+    color: #b2bec3;
+  }
+  
+  .login-wrapper input:focus {
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.3);
+    background: #2c3e50;
+  }
+  
+  /* Login Button */
+  .login-wrapper button {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    font-weight: bold;
+    margin-top: 12px;
+    background: #27ae60;
+    color: white;
+    transition: background 0.3s ease-in-out, transform 0.2s;
+  }
+  
+  .login-wrapper button:hover {
+    background: #2ecc71;
+    transform: scale(1.05);
+  }
+  
+  .login-wrapper button:active {
+    transform: scale(0.98);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 500px) {
+    .login-wrapper {
+      max-width: 90%;
+      padding: 20px;
+    }
   }
   

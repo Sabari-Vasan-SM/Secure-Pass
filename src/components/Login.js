@@ -17,7 +17,7 @@ const Login = () => {
   };
 
   return (
-    <div>
+    <div className="login-wrapper">
       <h2>Login</h2>
       <input
         type="email"
@@ -28,6 +28,7 @@ const Login = () => {
       <button onClick={handleLogin}>Login</button>
     </div>
   );
+  
 };
 
 export default Login;
